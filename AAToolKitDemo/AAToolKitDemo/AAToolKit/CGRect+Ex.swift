@@ -61,7 +61,7 @@ public extension CGRect {
             return maxY
         }
         set {
-            y = newValue - height
+            height = newValue - y
         }
     }
     
@@ -79,7 +79,7 @@ public extension CGRect {
             return maxX
         }
         set {
-            x = newValue - width
+            width = newValue - x
         }
     }
     
