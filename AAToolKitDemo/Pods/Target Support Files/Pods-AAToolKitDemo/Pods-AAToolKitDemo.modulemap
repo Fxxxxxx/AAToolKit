@@ -1,0 +1,6 @@
+framework module Pods_AAToolKitDemo {
+  umbrella header "Pods-AAToolKitDemo-umbrella.h"
+
+  export *
+  module * { export * }
+}

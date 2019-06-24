@@ -13,14 +13,28 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let color = UIColor.init(hexColor: 0xbbbbbb)
-        print(color)
-        view.backgroundColor = color
-          
+        _ = UIColor.init(hexColor: 0xfafafa)
+        _ = UIColor.init(r: 166, g: 166, b: 166)
+        
+        view.top = 100
+        view.bottom = 200
+        view.left = 100
+        view.right = 200
+        view.width = 100
+        view.height = 100
+        
+        saveToUserDefaults("hello AAToolKit", forKey: "kit")
+        _ = getValueFromUserDefaults(forKey: "kit")
+        
+        var time = Date().timeIntervalSince1970
+        time -= 60 * 60 * 24 * 365
+        let timeStamp = "\(Int(time))"
+        print(timeStamp.getTimeDescription() ?? "no time")
+        
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        print(view.bottom)
     }
     
 
