@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import CommonCrypto
 
 public extension String {
     
@@ -38,6 +39,42 @@ public extension String {
             }
             return false
         }
+    }
+    
+}
+
+public extension String {
+    
+    func md5() -> String {
+        let str = self.cString(using: String.Encoding.utf8)
+        let strLen = CUnsignedInt(self.lengthOfBytes(using: String.Encoding.utf8))
+        let digestLen = Int(CC_MD5_DIGEST_LENGTH)
+        let result = UnsafeMutablePointer<CUnsignedChar>.allocate(capacity: digestLen)
+        CC_MD5(str!, strLen, result)
+        let hash = NSMutableString()
+        for i in 0 ..< digestLen {
+            hash.appendFormat("%02x", result[i])
+        }
+        result.deinitialize(count: 0)
+        return String(format: hash as String)
+    }
+    
+    func sha1() -> String {
+        let data = self.data(using: String.Encoding.utf8)!
+        var digest = [UInt8](repeating: 0, count:Int(CC_SHA1_DIGEST_LENGTH))
+        let newData = NSData.init(data: data)
+        CC_SHA1(newData.bytes, CC_LONG(data.count), &digest)
+        let output = NSMutableString(capacity: Int(CC_SHA1_DIGEST_LENGTH))
+        for byte in digest {
+            output.appendFormat("%02x", byte)
+        }
+        return output as String
+    }
+    
+    
+    func base64() -> String? {
+        let strData = self.data(using: String.Encoding.utf8)
+        return strData?.base64EncodedString(options: Data.Base64EncodingOptions.endLineWithLineFeed)
     }
     
 }

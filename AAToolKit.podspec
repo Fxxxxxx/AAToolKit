@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name         = "AAToolKit"
-s.version      = "1.0.3"
+s.version      = "1.0.4"
 s.summary      = "iOS swift 工具库"
 s.homepage     = "https://github.com/Fxxxxxx/AAToolKit"
 s.license      = { :type => "MIT", :file => "LICENSE" }
