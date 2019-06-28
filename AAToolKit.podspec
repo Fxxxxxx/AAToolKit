@@ -7,6 +7,6 @@ s.license      = { :type => "MIT", :file => "LICENSE" }
 s.author       = { "Aaron Feng" => "e2shao1993@163.com" }
 s.source       = { :git => 'https://github.com/Fxxxxxx/AAToolKit.git',  :tag => "#{s.version}"}
 s.ios.deployment_target = '8.0'
-s.source_files = 'AAToolKit/*.swift'
+s.source_files = 'AAToolKit/*/**'
 s.swift_version = '5.0'
 end
