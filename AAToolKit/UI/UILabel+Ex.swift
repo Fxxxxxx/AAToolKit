@@ -1,5 +1,5 @@
 //
-//  UILable+Ex.swift
+//  UILabel+Ex.swift
 //  AAToolKitDemo
 //
 //  Created by Fxxx on 2019/6/28.
