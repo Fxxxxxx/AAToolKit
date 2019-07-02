@@ -14,6 +14,7 @@
 		30C167F622BE2A690065F2C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30C167F522BE2A690065F2C0 /* Assets.xcassets */; };
 		30C167F922BE2A690065F2C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30C167F722BE2A690065F2C0 /* LaunchScreen.storyboard */; };
 		4B9C3E5D99B38B6CA4EFE3C1 /* Pods_AAToolKitDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E6045BCBDCC098A5EACA4DD /* Pods_AAToolKitDemo.framework */; };
+		9313C84822CB4786004630BC /* AAToolProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9313C84722CB4786004630BC /* AAToolProtocol.swift */; };
 		93BC6E3A22C068EA0068282F /* CGRect+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BC6E3022C068EA0068282F /* CGRect+Ex.swift */; };
 		93BC6E3B22C068EA0068282F /* UICollectionView+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BC6E3122C068EA0068282F /* UICollectionView+Ex.swift */; };
 		93BC6E3C22C068EA0068282F /* UIViewController+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BC6E3222C068EA0068282F /* UIViewController+Ex.swift */; };
@@ -38,6 +39,7 @@
 		30C167F822BE2A690065F2C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		30C167FA22BE2A690065F2C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3E6045BCBDCC098A5EACA4DD /* Pods_AAToolKitDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AAToolKitDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9313C84722CB4786004630BC /* AAToolProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AAToolProtocol.swift; sourceTree = "<group>"; };
 		93BC6E3022C068EA0068282F /* CGRect+Ex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGRect+Ex.swift"; sourceTree = "<group>"; };
 		93BC6E3122C068EA0068282F /* UICollectionView+Ex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Ex.swift"; sourceTree = "<group>"; };
 		93BC6E3222C068EA0068282F /* UIViewController+Ex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ex.swift"; sourceTree = "<group>"; };
@@ -79,10 +81,8 @@
 		303712E522C65FEF00CDE5BE /* Primitive_Data */ = {
 			isa = PBXGroup;
 			children = (
-				93BC6E3922C068EA0068282F /* TimeTool.swift */,
 				93BC6E3422C068EA0068282F /* String+Ex.swift */,
 				93BC6E3022C068EA0068282F /* CGRect+Ex.swift */,
-				93BC6E3622C068EA0068282F /* UserDefaultsTool.swift */,
 			);
 			path = Primitive_Data;
 			sourceTree = "<group>";
@@ -124,6 +124,9 @@
 			children = (
 				303712E522C65FEF00CDE5BE /* Primitive_Data */,
 				303712E422C65FE300CDE5BE /* UI */,
+				9313C84722CB4786004630BC /* AAToolProtocol.swift */,
+				93BC6E3922C068EA0068282F /* TimeTool.swift */,
+				93BC6E3622C068EA0068282F /* UserDefaultsTool.swift */,
 			);
 			name = AAToolKit;
 			path = ../../AAToolKit;
@@ -244,6 +247,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				93BC6E3F22C068EA0068282F /* UIColor+Ex.swift in Sources */,
+				9313C84822CB4786004630BC /* AAToolProtocol.swift in Sources */,
 				30C167F122BE2A670065F2C0 /* ViewController.swift in Sources */,
 				93BC6E4122C068EA0068282F /* UITableView+Ex.swift in Sources */,
 				93BC6E4222C068EA0068282F /* UIImage+Ex.swift in Sources */,

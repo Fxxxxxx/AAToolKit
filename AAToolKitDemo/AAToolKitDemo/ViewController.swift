@@ -29,7 +29,7 @@ class ViewController: UIViewController {
         var time = Date().timeIntervalSince1970
         time -= 60 * 60 * 24 * 365
         let timeStamp = "\(Int(time))"
-        print(timeStamp.getTimeDescription() ?? "no time")
+        print(timeStamp.aa.getTimeDescription() ?? "no time")
         
         let label = UILabel()
         view.addSubview(label)
