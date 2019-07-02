@@ -42,6 +42,8 @@ class ViewController: UIViewController {
         label.setLineSpace(30)
         label.setWordSpace(20)
         
+        view.convertToImage()?.savetoAlbum()
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {

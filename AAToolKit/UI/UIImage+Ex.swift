@@ -7,11 +7,18 @@
 //
 
 import UIKit
+import Photos
 
 public extension UIImage {
     
     func alwaysOriginal() -> UIImage {
         return self.withRenderingMode(.alwaysOriginal)
+    }
+    
+    func savetoAlbum(_ completionHandler: ((Bool, Error?) -> Void)? = nil) {
+        PHPhotoLibrary.shared().performChanges({
+            PHAssetChangeRequest.creationRequestForAsset(from: self)
+        }, completionHandler: completionHandler)
     }
     
     convenience init?(name: String, bundleName: String) {

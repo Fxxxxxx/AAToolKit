@@ -28,6 +28,17 @@ public extension UIView {
         }
     }
     
+    func convertToImage() -> UIImage? {
+        UIGraphicsBeginImageContextWithOptions(self.bounds.size, false, 0)
+        if let context = UIGraphicsGetCurrentContext() {
+            self.layer.render(in: context)
+            let image = UIGraphicsGetImageFromCurrentImageContext()
+            UIGraphicsEndImageContext()
+            return image
+        }
+        return nil
+    }
+    
 }
 
 public extension UIView {
