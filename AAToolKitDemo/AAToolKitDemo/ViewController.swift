@@ -42,7 +42,16 @@ class ViewController: UIViewController {
         label.setLineSpace(30)
         label.setWordSpace(20)
         
-        view.convertToImage()?.savetoAlbum()
+        view.convertToImage()?.savetoAlbum({ (result, error) in
+            if result {
+                print("保存成功")
+            } else {
+                print("保存失败")
+                if let err = error {
+                    print("\(err.localizedDescription)")
+                }
+            }
+        })
         
     }
     

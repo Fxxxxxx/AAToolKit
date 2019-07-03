@@ -16,9 +16,17 @@ public extension UIImage {
     }
     
     func savetoAlbum(_ completionHandler: ((Bool, Error?) -> Void)? = nil) {
-        PHPhotoLibrary.shared().performChanges({
-            PHAssetChangeRequest.creationRequestForAsset(from: self)
-        }, completionHandler: completionHandler)
+        PHPhotoLibrary.requestAuthorization { (status) in
+            switch status {
+            case .authorized:
+                PHPhotoLibrary.shared().performChanges({
+                    PHAssetChangeRequest.creationRequestForAsset(from: self)
+                }, completionHandler: completionHandler)
+            default:
+                completionHandler?(false, BaseError.init("not authorized"))
+            }
+        }
+        
     }
     
     convenience init?(name: String, bundleName: String) {
