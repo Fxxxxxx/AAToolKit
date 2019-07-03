@@ -7,6 +7,7 @@
 
 import Foundation
 import CommonCrypto
+import UIKit
 
 public extension String {
     
@@ -71,10 +72,19 @@ public extension String {
         return output as String
     }
     
-    
     func base64() -> String? {
         let strData = self.data(using: String.Encoding.utf8)
         return strData?.base64EncodedString(options: Data.Base64EncodingOptions.endLineWithLineFeed)
+    }
+    
+}
+
+public extension String {
+    
+    //复制到全局剪贴板
+    func copyToPasteBoard() {
+        let board = UIPasteboard.general
+        board.string = self
     }
     
 }
