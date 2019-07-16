@@ -26,7 +26,6 @@ public extension UIImage {
                 completionHandler?(false, BaseError.init("not authorized"))
             }
         }
-        
     }
     
     convenience init?(name: String, bundleName: String) {
