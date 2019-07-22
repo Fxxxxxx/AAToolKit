@@ -53,11 +53,12 @@ class ViewController: UIViewController {
             }
         })
         
+        print(self.className())
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
     }
     
-
 }
 

@@ -26,6 +26,7 @@
 		93BC6E4122C068EA0068282F /* UITableView+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BC6E3722C068EA0068282F /* UITableView+Ex.swift */; };
 		93BC6E4222C068EA0068282F /* UIImage+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BC6E3822C068EA0068282F /* UIImage+Ex.swift */; };
 		93BC6E4322C068EA0068282F /* TimeTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BC6E3922C068EA0068282F /* TimeTool.swift */; };
+		93F3A43922E5482C00D949B7 /* NSObject+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F3A43822E5482C00D949B7 /* NSObject+Ex.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		93BC6E3722C068EA0068282F /* UITableView+Ex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Ex.swift"; sourceTree = "<group>"; };
 		93BC6E3822C068EA0068282F /* UIImage+Ex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Ex.swift"; sourceTree = "<group>"; };
 		93BC6E3922C068EA0068282F /* TimeTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeTool.swift; sourceTree = "<group>"; };
+		93F3A43822E5482C00D949B7 /* NSObject+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "NSObject+Ex.swift"; path = "../../../../../../System/Volumes/Data/Users/aaron/Documents/Git/AAToolKit/AAToolKit/NSObject+Ex.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 				93BC6E3922C068EA0068282F /* TimeTool.swift */,
 				93BC6E3622C068EA0068282F /* UserDefaultsTool.swift */,
 				93896A8022CC585500E4E610 /* BaseError.swift */,
+				93F3A43822E5482C00D949B7 /* NSObject+Ex.swift */,
 			);
 			name = AAToolKit;
 			path = ../../AAToolKit;
@@ -261,6 +264,7 @@
 				93BC6E4022C068EA0068282F /* UserDefaultsTool.swift in Sources */,
 				93BC6E3B22C068EA0068282F /* UICollectionView+Ex.swift in Sources */,
 				93BC6E3A22C068EA0068282F /* CGRect+Ex.swift in Sources */,
+				93F3A43922E5482C00D949B7 /* NSObject+Ex.swift in Sources */,
 				30C167EF22BE2A670065F2C0 /* AppDelegate.swift in Sources */,
 				93BC6E4322C068EA0068282F /* TimeTool.swift in Sources */,
 				93BC6E3D22C068EA0068282F /* UIView+Ex.swift in Sources */,
