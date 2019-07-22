@@ -54,6 +54,7 @@ class ViewController: UIViewController {
         })
         
         print(self.className())
+        print(ViewController.className())
         
     }
     

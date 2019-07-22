@@ -8,7 +8,13 @@
 import Foundation
 
 public extension NSObject {
+    
     func className() -> String {
         return String.init(describing: type(of: self))
     }
+    
+    class func className() -> String {
+        return String.init(describing: self.classForCoder())
+    }
+    
 }
