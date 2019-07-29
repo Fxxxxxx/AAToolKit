@@ -37,15 +37,7 @@ public extension UICollectionView {
     
 }
 
-public extension UICollectionViewCell {
-    static func nib() -> UINib? {
-        let nibName = String.init(describing: self.classForCoder())
-        let bundle = Bundle.init(for: self.classForCoder())
-        return UINib.init(nibName: nibName, bundle: bundle)
-    }
-}
-
-public extension UITableViewCell {
+public extension UICollectionReusableView {
     static func nib() -> UINib? {
         let nibName = String.init(describing: self.classForCoder())
         let bundle = Bundle.init(for: self.classForCoder())
