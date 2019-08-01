@@ -11,7 +11,7 @@ import UIKit
 
 public extension UIView {
     
-    func viewController() -> UIViewController? {
+    func getViewController() -> UIViewController? {
         var nextResp = next
         while nextResp != nil {
             if nextResp is UIViewController {
@@ -43,57 +43,57 @@ public extension UIView {
 
 public extension UIView {
     
-    var top: CGFloat {
+    var Top: CGFloat {
         get {
-            return frame.top
+            return frame.Top
         }
         set {
-            frame.top = newValue
+            frame.Top = newValue
         }
     }
     
-    var bottom: CGFloat {
+    var Bottom: CGFloat {
         get {
-            return frame.bottom
+            return frame.Bottom
         }
         set {
-            frame.bottom = newValue
+            frame.Bottom = newValue
         }
     }
     
-    var left: CGFloat {
+    var Left: CGFloat {
         get {
-            return frame.left
+            return frame.Left
         }
         set {
-            frame.left = newValue
+            frame.Left = newValue
         }
     }
     
-    var right: CGFloat {
+    var Right: CGFloat {
         get {
-            return frame.right
+            return frame.Right
         }
         set {
-            frame.right = newValue
+            frame.Right = newValue
         }
     }
     
-    var width: CGFloat {
+    var Width: CGFloat {
         get {
-            return frame.width
+            return frame.Width
         }
         set {
-            frame.width = newValue
+            frame.Width = newValue
         }
     }
     
-    var height: CGFloat {
+    var Height: CGFloat {
         get {
-            return frame.height
+            return frame.Height
         }
         set {
-            frame.height = newValue
+            frame.Height = newValue
         }
     }
     

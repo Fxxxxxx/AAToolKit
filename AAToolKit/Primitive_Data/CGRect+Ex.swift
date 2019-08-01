@@ -11,16 +11,16 @@ import UIKit
 
 public extension CGRect {
     
-    var width: CGFloat {
+    var Width: CGFloat {
         get {
-            return size.width
+            return size.height
         }
         set {
             size.width = newValue
         }
     }
     
-    var height: CGFloat {
+    var Height: CGFloat {
         get {
             return size.height
         }
@@ -29,7 +29,7 @@ public extension CGRect {
         }
     }
     
-    var x: CGFloat {
+    var X: CGFloat {
         get {
             return origin.x
         }
@@ -38,7 +38,7 @@ public extension CGRect {
         }
     }
     
-    var y: CGFloat {
+    var Y: CGFloat {
         get {
             return origin.y
         }
@@ -47,39 +47,39 @@ public extension CGRect {
         }
     }
     
-    var top: CGFloat {
+    var Top: CGFloat {
         get {
-            return y
+            return Y
         }
         set {
-            y = newValue
+            Y = newValue
         }
     }
     
-    var bottom: CGFloat {
+    var Bottom: CGFloat {
         get {
             return maxY
         }
         set {
-            height = newValue - y
+            Height = newValue - Y
         }
     }
     
-    var left: CGFloat {
+    var Left: CGFloat {
         get {
-            return x
+            return X
         }
         set {
-            x = newValue
+            X = newValue
         }
     }
     
-    var right: CGFloat {
+    var Right: CGFloat {
         get {
             return maxX
         }
         set {
-            width = newValue - x
+            Width = newValue - X
         }
     }
     
