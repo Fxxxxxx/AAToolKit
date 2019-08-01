@@ -13,7 +13,7 @@ public extension CGRect {
     
     var Width: CGFloat {
         get {
-            return size.height
+            return size.width
         }
         set {
             size.width = newValue
