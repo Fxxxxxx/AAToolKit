@@ -33,8 +33,8 @@ class ViewController: UIViewController {
         
         let label = UILabel()
         view.addSubview(label)
-        label.width = 200
-        label.height = 200
+        label.Width = 200
+        label.Height = 200
         label.center = view.center
         label.textColor = .red
         label.numberOfLines = 0
@@ -53,8 +53,12 @@ class ViewController: UIViewController {
             }
         })
         
-        print(self.className())
-        print(ViewController.className())
+        print(self.ClassName())
+        print(ViewController.ClassName())
+        
+        let str = "hello world"
+        let c = str[1]
+        print(c)
         
     }
     

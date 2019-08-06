@@ -88,3 +88,10 @@ public extension String {
     }
     
 }
+
+public extension String {
+    subscript(_ index: Int) -> Character {
+        let arr = Array(self)
+        return arr[index]
+    }
+}
