@@ -12,12 +12,12 @@ import UIKit
 public extension UIView {
     
     func getViewController() -> UIViewController? {
-        var nextResp = next
-        while nextResp != nil {
-            if nextResp is UIViewController {
-                return nextResp as? UIViewController
+        var superV = superview
+        while superV != nil {
+            if superV?.next is UIViewController {
+                return superV?.next as? UIViewController
             }
-            nextResp = next
+            superV = superV?.superview
         }
         return nil
     }
