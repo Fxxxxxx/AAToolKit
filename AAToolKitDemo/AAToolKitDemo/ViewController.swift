@@ -27,7 +27,7 @@ class ViewController: UIViewController {
         _ = getValueFromUserDefaults(forKey: "kit")
         
         var time = Date().timeIntervalSince1970
-        time -= 60 * 60 * 24 * 365
+        time -= 60 * 60 * 23
         let timeStamp = "\(Int(time))"
         print(timeStamp.aa.getTimeDescription() ?? "no time")
         
