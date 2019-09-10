@@ -98,3 +98,10 @@ public extension UIView {
     }
     
 }
+
+public extension UIView {
+    class func nib() -> UINib? {
+        let bundle = Bundle.init(for: self)
+        return UINib.init(nibName: ClassName(), bundle: bundle)
+    }
+}
