@@ -15,6 +15,10 @@ public extension UIImage {
         return self.withRenderingMode(.alwaysOriginal)
     }
     
+    func alwaysTemplate() -> UIImage {
+        return self.withRenderingMode(.alwaysTemplate)
+    }
+    
     func savetoAlbum(_ completionHandler: ((Bool, Error?) -> Void)? = nil) {
         PHPhotoLibrary.requestAuthorization { (status) in
             switch status {
