@@ -104,4 +104,9 @@ public extension UIView {
         let bundle = Bundle.init(for: self)
         return UINib.init(nibName: ClassName(), bundle: bundle)
     }
+    
+    class func loadFromNib(_ nibName: String? = nil) -> UIView? {
+        let bundle = Bundle.init(for: self)
+        return bundle.loadNibNamed(nibName ?? ClassName(), owner: nil, options: nil)?.first as? UIView
+    }
 }
