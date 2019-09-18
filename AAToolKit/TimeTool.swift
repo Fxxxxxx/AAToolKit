@@ -17,7 +17,11 @@ public extension AAToolWrapper where Base == Double {
         forMatter.dateFormat = "D"
         let day = Int(forMatter.string(from: .init(timeIntervalSince1970: self.base))) ?? 0
         let nowDay = Int(forMatter.string(from: .init())) ?? 0
-        if duration < 60 * 2 {
+        if duration < 0 {
+            //未来
+            forMatter.dateFormat = "yyyy-MM-dd HH:mm"
+            return forMatter.string(from: .init(timeIntervalSince1970: base))
+        } else if duration < 60 * 2 {
             //两分钟之内
             return "刚刚"
         } else if duration < 60 * 60 {
