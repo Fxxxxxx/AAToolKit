@@ -20,10 +20,19 @@ public extension UIViewController {
         self.navigationController?.popViewController(animated: animated)
     }
     
+    func present(to vc: UIViewController, style: UIModalPresentationStyle = .fullScreen, animated: Bool = true, completion: (() -> Void)? = nil) {
+        vc.modalPresentationStyle = style
+        var target = self
+        while target.presentedViewController != nil {
+            target = target.presentedViewController!
+        }
+        target.present(vc, animated: animated, completion: completion)
+    }
+    
     func showAlert(title: String?, message: String?) {
         let alert = UIAlertController.init(title: title, message: message, preferredStyle: .alert)
         alert.addAction(.init(title: "确定", style: .default, handler: nil))
-        self.present(alert, animated: true, completion: nil)
+        self.present(to: alert)
     }
     
 }

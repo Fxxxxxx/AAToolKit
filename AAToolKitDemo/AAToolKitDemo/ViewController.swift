@@ -63,6 +63,20 @@ class ViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        print("viewDidAppear")
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        print("viewDidDisappear")
+    }
+    
+    @IBAction func action(_ sender: UIButton) {
+        if self.presentingViewController != nil {
+            self.dismiss(animated: true, completion: nil)
+        } else {
+            let vc = self.storyboard?.instantiateInitialViewController()
+            self.present(to: vc!)
+        }
     }
     
 }
