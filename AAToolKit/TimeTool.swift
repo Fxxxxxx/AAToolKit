@@ -54,6 +54,13 @@ public extension AAToolWrapper where Base == Double {
         }
     }
     
+    func getTimeText(by dateFormat: String) -> String {
+        let date = Date.init(timeIntervalSince1970: base)
+        let forMatter = DateFormatter()
+        forMatter.dateFormat = dateFormat
+        return forMatter.string(from: date)
+    }
+    
 }
 
 extension String: AAToolProtocol {}
@@ -63,6 +70,10 @@ public extension AAToolWrapper where Base == String {
         return Double(base)?.aa.getTimeDescription()
     }
     
+    func getTimeText(by dateFormat: String) -> String? {
+        return Double(base)?.aa.getTimeText(by: dateFormat)
+    }
+    
 }
 
 extension Int: AAToolProtocol {}
@@ -70,6 +81,10 @@ public extension AAToolWrapper where Base == Int {
     
     func getTimeDescription() -> String {
         return Double(base).aa.getTimeDescription()
+    }
+    
+    func getTimeText(by dateFormat: String) -> String {
+        return Double(base).aa.getTimeText(by: dateFormat)
     }
     
 }
