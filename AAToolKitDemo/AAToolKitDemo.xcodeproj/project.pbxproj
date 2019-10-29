@@ -28,6 +28,7 @@
 		93BC6E4322C068EA0068282F /* TimeTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BC6E3922C068EA0068282F /* TimeTool.swift */; };
 		E753886B2302B8FA0072E3E5 /* NSObject+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = E753886A2302B8FA0072E3E5 /* NSObject+Ex.swift */; };
 		E76411FC2362CFB30028E500 /* UIApplication+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76411FB2362CFB30028E500 /* UIApplication+Ex.swift */; };
+		E7EA51AF2368141B002F25E5 /* UIButton_Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EA51AE2368141B002F25E5 /* UIButton_Ex.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		93BC6E3922C068EA0068282F /* TimeTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeTool.swift; sourceTree = "<group>"; };
 		E753886A2302B8FA0072E3E5 /* NSObject+Ex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+Ex.swift"; sourceTree = "<group>"; };
 		E76411FB2362CFB30028E500 /* UIApplication+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Ex.swift"; sourceTree = "<group>"; };
+		E7EA51AE2368141B002F25E5 /* UIButton_Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton_Ex.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 				93BC6E3322C068EA0068282F /* UIView+Ex.swift */,
 				93BC6E3722C068EA0068282F /* UITableView+Ex.swift */,
 				303712E622C660A500CDE5BE /* UILabel+Ex.swift */,
+				E7EA51AE2368141B002F25E5 /* UIButton_Ex.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 				93BC6E4222C068EA0068282F /* UIImage+Ex.swift in Sources */,
 				93BC6E3C22C068EA0068282F /* UIViewController+Ex.swift in Sources */,
 				303712E722C660A500CDE5BE /* UILabel+Ex.swift in Sources */,
+				E7EA51AF2368141B002F25E5 /* UIButton_Ex.swift in Sources */,
 				E76411FC2362CFB30028E500 /* UIApplication+Ex.swift in Sources */,
 				93BC6E3E22C068EA0068282F /* String+Ex.swift in Sources */,
 				93BC6E4022C068EA0068282F /* UserDefaultsTool.swift in Sources */,

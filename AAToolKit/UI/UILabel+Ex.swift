@@ -41,4 +41,10 @@ public extension UILabel {
         sizeToFit()
     }
     
+    func setBackgroundImage(_ image: UIImage) {
+        let imgLayer = CALayer.init()
+        imgLayer.contents = image.cgImage
+        imgLayer.frame = bounds
+        layer.insertSublayer(imgLayer, at: 0)
+    }
 }
