@@ -14,4 +14,14 @@ public extension UIApplication {
             win.isKeyWindow
         }
     }
+    
+    func open(url: String) {
+        if let url = URL.init(string: url) {
+            if #available(iOS 10.0, *) {
+                open(url, options: [:], completionHandler: nil)
+            } else {
+                openURL(url)
+            }
+        }
+    }
 }
