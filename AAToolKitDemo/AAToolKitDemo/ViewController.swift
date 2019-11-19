@@ -13,8 +13,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        _ = UIColor.init(hexColor: 0xfafafa)
-        _ = UIColor.init(r: 166, g: 166, b: 166)
+//        _ = UIColor.init(hexColor: 0xfafafa)
+//        _ = UIColor.init(r: 166, g: 166, b: 166)
         
 //        view.top = 100
 //        view.bottom = 200
@@ -59,6 +59,9 @@ class ViewController: UIViewController {
         let str = "hello world"
         let c = str[1]
         print(c)
+        
+        let color = UIColor.init(hexString: "ffffff")
+        print(color ?? "no color")
         
     }
     

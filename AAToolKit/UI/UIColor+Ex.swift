@@ -22,10 +22,17 @@ public extension UIColor {
         self.init(red: red, green: green, blue: blue, alpha: alpha)
     }
     
-    //该方法不稳定，出现英文字符会失败
-//    convenience init(hexString: String, alpha: CGFloat = 1.0) {
-//        let hex = (hexString as NSString).longLongValue
-//        self.init(hexColor: hex, alpha: alpha)
-//    }
+    convenience init?(hexString: String, alpha: CGFloat = 1.0) {
+        var hex: UInt64 = 0
+        var hexS = hexString.uppercased()
+        if !hexS.hasPrefix("0X") {
+            hexS = "0X" + hexS
+        }
+        if Scanner.init(string: hexS).scanHexInt64(&hex) {
+            self.init(hexColor: Int64(hex), alpha: alpha)
+            return
+        }
+        return nil
+    }
     
 }
