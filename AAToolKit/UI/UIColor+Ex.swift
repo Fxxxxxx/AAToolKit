@@ -22,17 +22,17 @@ public extension UIColor {
         self.init(red: red, green: green, blue: blue, alpha: alpha)
     }
     
-    convenience init?(hexString: String, alpha: CGFloat = 1.0) {
+    convenience init(hexString: String, alpha: CGFloat = 1.0) {
         var hex: UInt64 = 0
-        var hexS = hexString.uppercased()
+        var hexS = hexString
+            .trimmingCharacters(in: .symbols)
+            .trimmingCharacters(in: .whitespacesAndNewlines)
+            .uppercased()
         if !hexS.hasPrefix("0X") {
             hexS = "0X" + hexS
         }
-        if Scanner.init(string: hexS).scanHexInt64(&hex) {
-            self.init(hexColor: Int64(hex), alpha: alpha)
-            return
-        }
-        return nil
+        Scanner.init(string: hexS).scanHexInt64(&hex)
+        self.init(hexColor: Int64(hex), alpha: alpha)
     }
     
 }

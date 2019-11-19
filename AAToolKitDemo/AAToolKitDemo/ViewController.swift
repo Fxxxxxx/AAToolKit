@@ -60,8 +60,8 @@ class ViewController: UIViewController {
         let c = str[1]
         print(c)
         
-        let color = UIColor.init(hexString: "ffffff")
-        print(color ?? "no color")
+        let color = UIColor.init(hexString: "#ze ffffff")
+        print(color)
         
     }
     
